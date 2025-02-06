@@ -13,7 +13,7 @@ public class ServiceConfig {
     @Value("${services.gps.url}")
     private String gpsServiceUrl;
 
-    @Value("${services.rewards.url")
+    @Value("${services.rewards.url}")
     private String rewardsServiceUrl;
 
     @Bean
@@ -22,10 +22,10 @@ public class ServiceConfig {
         return new GpsClient(restTemplate, gpsServiceUrl);
     }
 
-    @Bean
-    public RewardsClient rewardsClient(RestTemplate restTemplate) {
-        // création d'un client Rewards qui utilisera le RestTemplate pour communiquer avec le service Rewards
-        return new RewardsClient(restTemplate, rewardsServiceUrl);
-    }
+//    @Bean
+//    public RewardsClient rewardsClient(RestTemplate restTemplate) {
+//        // création d'un client Rewards qui utilisera le RestTemplate pour communiquer avec le service Rewards
+//        return new RewardsClient(restTemplate, rewardsServiceUrl);
+//    }
 
 }

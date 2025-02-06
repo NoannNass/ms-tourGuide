@@ -7,10 +7,9 @@ public class RewardsClient {
     private final RestTemplate restTemplate;
     private final String baseUrl;
 
-    public RewardsClient(RestTemplate restTemplate, String rewardsServiceUrl, RestTemplate restTemplate1, String baseUrl) {
-        this.restTemplate = restTemplate1;
+
+    public RewardsClient(RestTemplate restTemplate, String baseUrl) {
+        this.restTemplate = restTemplate;
         this.baseUrl = baseUrl;
     }
-
-
 }
